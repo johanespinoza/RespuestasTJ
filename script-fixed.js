@@ -117,23 +117,7 @@ document.addEventListener('DOMContentLoaded', function() {
         setTimeout(typeWriter, 500);
     }
 
-    // Lazy loading para imágenes
-    const images = document.querySelectorAll('img');
-    const imageObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const img = entry.target;
-                img.style.opacity = '0';
-                img.addEventListener('load', () => {
-                    img.style.transition = 'opacity 0.5s ease-in-out';
-                    img.style.opacity = '1';
-                });
-                imageObserver.unobserve(img);
-            }
-        });
-    });
-
-    images.forEach(img => imageObserver.observe(img));
+    // Las imágenes se cargan normalmente sin efectos de fade-in
 
     // Efecto de partículas sutiles en el fondo
     function createParticle() {
