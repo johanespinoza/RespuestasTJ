@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const priceObserver = new IntersectionObserver(function(entries) {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    animateCounter(priceElement, 0, 6.99, 2000);
+                    animateCounter(priceElement, 0, 7.99, 2000);
                     priceObserver.unobserve(entry.target);
                 }
             });
